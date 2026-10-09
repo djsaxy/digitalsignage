@@ -3,7 +3,7 @@
 # prior to running this will have to have installed git and run git clone https://github.com/djsaxy/digitalsignage
 
 # add graphics driver(s)
-sudo pacman -Syu --needed --noconfirm openbox xdg-utils unclutter xorg-xinit xdotool chromium
+sudo pacman -Syu --needed --noconfirm openbox xdg-utils unclutter xorg-xinit xdotool chromium vim
 
 sudo mv ~/digitalsignage/.profile /home/ccboe/
 sudo mv ~/digitalsignage/autostart /etc/xdg/openbox/autostart
