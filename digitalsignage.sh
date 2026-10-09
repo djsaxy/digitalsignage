@@ -5,7 +5,7 @@
 # add graphics driver(s)
 sudo pacman -Syu --needed --noconfirm openbox xdg-utils unclutter xorg xdotool chromium vim xf86-video-intel xf86-video-fbdev
 
-mv ~/digitalsignage/.profile /home/ccboe/
+mv ~/digitalsignage/.bash_profile /home/ccboe/
 sudo mv ~/digitalsignage/autostart /etc/xdg/openbox/autostart
 sudo mkdir /etc/systemd/system/getty@tty1.service.d
 sudo mv ~/digitalsignage/autologin.conf /etc/systemd/system/getty@tty1.service.d
