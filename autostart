@@ -1,0 +1,30 @@
+# Disable any form of screen saver / screen blanking / power management
+xset s off
+xset s noblank
+xset -dpms
+
+# Allow quitting the X server with CTRL-ATL-Backspace
+setxkbmap -option terminate:ctrl_alt_bksp
+
+# Start Chromium in kiosk mode
+sed -i 's/"exited_cleanly":false/"exited_cleanly":true/' ~/.config/chromium/'Local State'
+sed -i 's/"exited_cleanly":false/"exited_cleanly":true/; s/"exit_type":"[^"]\+"/"exit_type":"Normal"/' ~/.config/chromium/Default/Preferences
+
+#comment this line below once chromium auto-refresh plugin is configured (requires menus hidden by code below), see also /home/pi/.proflie
+
+#Change the URL in the line below to the URL that you want shown
+URL='https://www.calhoun.k12.al.us/Chromebit/signage/web/am.html'
+
+#First launch of Chromium to install extensions, adjust screen size, etc.   Comment out after first launch.
+#chromium $URL
+
+#Uncomment one of the three options below once chromium auto-refresh plugin is configured
+
+#Show URL page with 1.25x zoom
+#chromium --disable-infobars --kiosk --noerrdialogs --enable-features=OverlayScrollbar --disable-restore-session-state --force-device-scale-factor=1.40 $URL
+
+#Show URL page with (1.45x zoom):
+#chromium --disable-infobars --kiosk --noerrdialogs --enable-features=OverlayScrollbar --disable-restore-session-state --force-device-scale-factor=1.45 $URL
+
+#Show URL page 1.5x zoom
+chromium --disable-infobars --kiosk --noerrdialogs --enable-features=OverlayScrollbar --disable-restore-session-state --force-device-scale-factor=1.50 $URL
