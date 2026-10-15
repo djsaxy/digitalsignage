@@ -10,7 +10,7 @@ sudo apt update && sudo apt upgrade
 sudo apt install chromium unclutter
 
 sudo mv ~/digitalsignage/differentway/kiosk.sh ~/
-sudo chmod +x kiosk.sh
+chmod +x ~/kiosk.sh
 sudo mkdir -p ~/.config/systemd/user/
 sudo mv ~/digitalsignage/differentway/kiosk.service ~/.config/systemd/user
 sudo mv ~/digitalsignage/differentway/xsession.target ~/.config/systemd/user
