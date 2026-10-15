@@ -1,3 +1,9 @@
+# Prior to install
+# su
+# apt install sudo git
+# /usr/sbin/usermod -aG sudo ccboe
+# id ccboe
+
 sudo apt update && sudo apt upgrade
 
 sudo apt install chromium-browser unclutter
