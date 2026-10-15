@@ -7,7 +7,7 @@
 
 sudo apt update && sudo apt upgrade
 
-sudo apt install chromium unclutter network-manager
+sudo apt install chromium unclutter
 
 sudo mv ~/digitalsignage/differentway/kiosk.sh ~/
 chmod +x ~/kiosk.sh
