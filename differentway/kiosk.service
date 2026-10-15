@@ -3,7 +3,7 @@ Description=Chromium kiosk
 PartOf=graphical-session.target
 
 [Service]
-ExecStart=/home/pi/kiosk.sh
+ExecStart=/home/ccboe/kiosk.sh
 Restart=on-abort
 Type=forking
 
