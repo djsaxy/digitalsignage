@@ -32,6 +32,7 @@ apk add chromium
 
 # add .profile to home directory of ccboe
 # add .xinitrc to home directory of ccboe
+# need to figure out monitor names for if statement in .xinitrc if using laptop, chromebook, etc.
 
 chmod u+x .profile
 chmod u+x .xinitrc
