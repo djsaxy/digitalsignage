@@ -21,14 +21,12 @@ nano /etc/ssh/sshd_config
 service sshd restart
 
 setup-xorg-base
-apk add mesa-egl xf86-video-fbdev xf86-video-vesa dbus setxkbmap kbd xrandr xset
+apk add vim mesa-egl xf86-video-fbdev xf86-video-vesa dbus setxkbmap kbd xrandr xset chromium unclutter-xfixes
 
 nano /etc/inittab
 # in inittab
   tty1::respawn:/bin/login -f ccboe
 # save and exit
-
-apk add chromium unclutter-xfixes
 
 # add .profile to home directory of ccboe
 # add .xinitrc to home directory of ccboe
