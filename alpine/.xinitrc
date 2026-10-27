@@ -1,10 +1,10 @@
 #!/bin/sh
 
-if xrandr | grep "DP-1 disconnected"; then
+if xrandr | grep "HDMI-2 disconnected"; then
     xrandr --output eDP-1 --mode auto
 else
-    xrandr --output eDP-1 --off --output DP-1 --primary --mode auto
-fi;;
+    xrandr --output eDP-1 --off --output HDMI-2 --primary --mode 1920x1080
+fi;
 
 # turn off screensaver
 xset -dpms
