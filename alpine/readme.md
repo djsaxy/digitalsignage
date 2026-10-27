@@ -28,7 +28,7 @@ nano /etc/inittab
   tty1::respawn:/bin/login -f ccboe
 # save and exit
 
-apk add chromium
+apk add chromium unclutter-xfixes
 
 # add .profile to home directory of ccboe
 # add .xinitrc to home directory of ccboe
