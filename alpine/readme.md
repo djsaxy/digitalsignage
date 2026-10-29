@@ -1,15 +1,38 @@
 # Boot from USB
   # login as root with no password
   setup-alpine
+  # answers for setup alpine are as follows:
+    us
+    us
+    # hostname = device name ex: amtv1
+    # interface section should connect to wifi
+    # set root password to standard ccboe password
+    America/Chicago
+    none
+    busybox
+    f
+    ccboe
+    ccboe
+    # set user password to standard ccboe password
+    none
+    openssh
+    # choose disk to install to
+    sys
+    y
 
-# reboot and login as user setup during setup-alpine
+# reboot
+reboot
 
+# login as user created from setup-alpine
+
+# install git and nano
 doas apk add git nano
 
 # setup-xorg-base might make this unnecessary
 # nano /etc/apk/repositories
 # uncomment community repository, save and exit
 
+# download and run digitalsignage files from github
 git clone https://github.com/djsaxy/digitalsignage
 cd ~/digitalsignage/alpine
 chmod +x alpinedigitalsign.sh
@@ -34,4 +57,5 @@ doas nano /etc/inittab
   # save and exit
   doas service sshd restart
 
-reboot
+#reboot and it should autologin and run website as digital sign
+doas reboot

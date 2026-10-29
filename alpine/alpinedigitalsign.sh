@@ -10,5 +10,6 @@ mv ~/digitalsignage/alpine/.profile ~/
 # add .xinitrc to home directory of ccboe
 mv ~/digitalsignage/alpine/.xinitrc ~/
 
+cd
 chmod u+x .profile
 chmod u+x .xinitrc
