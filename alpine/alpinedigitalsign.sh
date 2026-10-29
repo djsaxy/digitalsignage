@@ -13,3 +13,5 @@ mv ~/digitalsignage/alpine/.xinitrc ~/
 cd
 chmod u+x .profile
 chmod u+x .xinitrc
+rm -rf digitalsignage
+doas apk del git
